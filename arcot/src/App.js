@@ -4,24 +4,38 @@ import BarChart from './BarGraph';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import LineChart from './LineChart';
+import PieChart from './PieChart';
 
 
 const App = () => {
 
   const [chartData,setChartData] = useState({});
   const [responseTime,setResponseTime] = useState("");
+  const [userRating,setUserRating] = useState("");
   useEffect(()=>{
     //Component dID Mount
     //To create category data
     createCategoryData();
     createResponseTime();
+    createUserRating();
 
   },[])
+
+
+
+  function createUserRating(){
+
+    const ratings = data.user_satisfaction;
+    setUserRating(ratings);
+    
+
+  }
 
   function createResponseTime(){
 
     const response_times = data.response_times;
     setResponseTime(response_times);
+    
   }
 
   function createCategoryData(){
@@ -59,6 +73,9 @@ const App = () => {
         dailyData={responseTime.day_wise}
         weeklyData={responseTime.week_wise}
       /></li>
+      <li>
+      <PieChart data={userRating} />
+      </li>
       </ol>
     </div>
   );

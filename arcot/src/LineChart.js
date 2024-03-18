@@ -80,7 +80,7 @@ const LineChart = ({ dailyData, weeklyData }) => {
   }, [dailyData, weeklyData]);
 
   return (<div style={{marginBottom:"16px"}}>
-    <h2 className={styles.heading}>Response Time</h2>
+    <h2 className={styles.heading}>Response Time Chart</h2>
     <div className={styles.container} style={{ position: 'relative', width: '90vw',display:"flex",flexWrap:"wrap",justifyContent:"space-between",alignItems:"center",padding:"8px",rowGap:"16px" }}>
         <div className={styles.first}>
       <canvas ref={dailyChartRef} id="dailyChart"></canvas></div>
