@@ -1,0 +1,25 @@
+.first{
+   
+    min-width: 650px;
+    height: 400px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 640px) {
+    .first{
+        min-width: 90vw;
+        margin: auto;
+    }
+  }
+  @media screen and (max-width: 1240px) {
+    .first{
+        
+        margin: auto;
+    }
+    
+  }
+
